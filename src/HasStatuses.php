@@ -30,17 +30,17 @@ trait HasStatuses
      */
     public function setStatus(string $name, ?string $reason = null): bool
     {
-        if (! $this->isValidStatus($name, $reason)) {
-            return false;
-        }
+//        if (! $this->isValidStatus($name, $reason)) {
+//            return false;
+//        }
 
         return $this->forceSetStatus($name, $reason);
     }
 
-    public function isValidStatus(string $name, ?string $reason = null): bool
-    {
-        return true;
-    }
+//    public function isValidStatus(string $name, ?string $reason = null): bool
+//    {
+//        return true;
+//    }
 
     public function forceSetStatus(string $name, ?string $reason = null): bool
     {
