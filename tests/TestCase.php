@@ -4,7 +4,6 @@ namespace Alejandrotrevi\LaravelAnkal\Tests;
 
 use Alejandrotrevi\LaravelAnkal\LaravelAnkalServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
