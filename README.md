@@ -1,7 +1,6 @@
 # Super simple statuses for your Laravel Models
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/alejandrotrevi/laravel-ankal.svg?style=flat-square)](https://packagist.org/packages/alejandrotrevi/laravel-ankal)
-[![Total Downloads](https://img.shields.io/packagist/dt/alejandrotrevi/laravel-ankal.svg?style=flat-square)](https://packagist.org/packages/alejandrotrevi/laravel-ankal)
+[![Latest Stable Version](https://poser.pugx.org/alejandrotrevi/laravel-ankal/v)](//packagist.org/packages/alejandrotrevi/laravel-ankal) [![Total Downloads](https://poser.pugx.org/alejandrotrevi/laravel-ankal/downloads)](//packagist.org/packages/alejandrotrevi/laravel-ankal) 
 ![GitHub Actions](https://github.com/alejandrotrevi/laravel-ankal/actions/workflows/main.yml/badge.svg)
 
 Sometimes you only need a simple way to manage statuses.
@@ -38,10 +37,10 @@ Schema::create('my_table', function (Blueprint $table) {
     $table->statusColumns();
 });
 ```
-behind the scenes this basically adds 3 columns: ``status``, ``reason`` y ``status_updated_at``.
+behind the scenes this basically adds 3 columns: ``status``, ``reason`` and ``status_updated_at``.
 
-Optionally you can set a default status for that table, you simply pass an additional argument to ``statusColumns()`` 
-this additional argument is the default status the ``status`` column will have when you create a new model.
+Optionally you can set a default status for that table, you simply pass an additional argument to the ``statusColumns()``
+table modifier this additional argument is the default status the ``status`` column will have when you create a new model.
 ```php
 Schema::create('my_table', function (Blueprint $table) {
     $table->statusColumns('my_default_status');
@@ -78,12 +77,12 @@ Model::currentStatus(['status', 'other-status']);
 ```
 Without a given status:
 ```php
-// All models except those with the "status" status
-Model::withoutStatus('status');
+// All models except those with the "my-status" status
+Model::exceptStatus('my-status');
 
-// All models except those with the "status" or "other-status" statuses.
-Model::withoutStatus('status', 'other-status');
-Model::withoutStatus(['status', 'other-status']);
+// All models except those with the "my-status" or "other-status" statuses.
+Model::exceptStatus('my-status', 'other-status');
+Model::exceptStatus(['my-status', 'other-status']);
 ```
 
 

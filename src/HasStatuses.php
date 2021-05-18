@@ -14,7 +14,7 @@ trait HasStatuses
         $query->where('status', $names);
     }
 
-    public function scopeWithoutStatus(Builder $query, ...$names)
+    public function scopeExceptStatus(Builder $query, ...$names)
     {
         $names = is_array($names) ? Arr::flatten($names) : func_get_args();
 
