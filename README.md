@@ -48,7 +48,7 @@ Schema::create('my_table', function (Blueprint $table) {
 });
 ```
 
-###Set a status
+### Set a status
 You can set a new status like this:
 ```php
 $model->setStatus('status');
@@ -65,7 +65,7 @@ $model->reason;
 $model->status_updated_at;
 ```
 
-###Scopes
+### Scopes
 You have 2 scopes available for your models ``currentStatus`` and ``withoutStatus``.
 
 ```php
