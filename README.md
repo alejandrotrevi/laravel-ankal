@@ -119,4 +119,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Why Ankal?
 
-Ankal means "To be" in Mayan language.
+Ankal means "To be" in the Mayan language.
