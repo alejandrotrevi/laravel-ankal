@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateStatusColumns extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        // Add the status columns to your table, you only need
+        // to call the $table->statusColumns column modifier to
+        // include all de necessary fields in your table, this
+        // will create 3 columns: status, reason and status_updated_at
+
+        // Schema::table('my_table', function (Blueprint $table) {
+        //     $table->statusColumns()
+        // });
+
+        // You can pass a default status for that table to
+        // statusColumns when a new model is created this status
+        // will be applied by default.
+
+        // Schema::table('my_table', function (Blueprint $table) {
+        //     $table->statusColumns('my_default_status')
+        // });
+    }
+}
