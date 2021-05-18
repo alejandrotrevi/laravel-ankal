@@ -14,8 +14,8 @@ You can install the package via composer:
 composer require alejandrotrevi/laravel-ankal
 ```
 
-Opcionalmente, puedes publicar la migración incluida con la librería. La migración incluida es un buen lugar para
-añadir las columnas necesarias en tus tablas o tal vez remover algunas columnas de las tablas existentes.
+Optionally, you can publish the migration included with the library. The included migration is a good place to
+add the necessary columns to your tables or perhaps remove some columns from existing tables.
 ```php
 php artisan vendor:publish --provider="Alejandrotrevi\LaravelAnkal\LaravelAnkalServiceProvider" --tag="migrations"
 ```
@@ -32,16 +32,16 @@ class MyModel extends Model
 }
 ```
 
-Añade las migraciones necesarias a cada una de las tablas sobre las cuales usarás los status.
+Add the necessary migrations to each of the tables on which you will use the statuses.
 ```php
 Schema::create('my_table', function (Blueprint $table) {
     $table->statusColumns();
 });
 ```
-detrás de escenas esto básicamente te añade 3 columnas: ``status``, ``reason`` y ``status_updated_at``.
+behind the scenes this basically adds 3 columns: ``status``, ``reason`` y ``status_updated_at``.
 
-Opcionalmente puedes establecer un estatus por defecto para esa tabla, simplemente le pasas un argumento adicional
-a ``statusColumns()`` este argumento adicional es el estatus que tendrá por defecto la tabla al crear un nuevo modelo.
+Optionally you can set a default status for that table, you simply pass an additional argument to ``statusColumns()`` 
+this additional argument is the default status the ``status`` column will have when you create a new model.
 ```php
 Schema::create('my_table', function (Blueprint $table) {
     $table->statusColumns('my_default_status');
@@ -107,7 +107,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 If you discover any security related issues, please email alex_tf_1992@live.com.mx instead of using the issue tracker.
 
 ## Credits
-This package is heavily inspired in the [spatie / laravel-model-status](https://github.com/spatie/laravel-model-status) package, this aims to be
+This package is heavily inspired in the [spatie/laravel-model-status](https://github.com/spatie/laravel-model-status) package, this aims to be
 a simpler version of Spatie's solution, every credit should go to them :hugs:
 
 -   [Alejandro](https://github.com/alejandrotrevi)
