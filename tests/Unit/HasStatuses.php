@@ -12,7 +12,7 @@ class HasStatuses extends TestCase
     use RefreshDatabase;
 
     /**
-     * @var \Alejandrotrevi\LaravelAnkal\Models\TestModel
+     * @var TestModel
      */
     public $model;
 
@@ -21,7 +21,7 @@ class HasStatuses extends TestCase
         parent::setUp();
 
         $this->model = TestModel::create([
-           'name' =>  Inspiring::quote()
+            'name' => Inspiring::quote()
         ]);
     }
 
@@ -55,7 +55,7 @@ class HasStatuses extends TestCase
     public function test_current_status_scope_filters_correctly()
     {
         $newModel = TestModel::create([
-            'name' =>  'new-test-model'
+            'name' => 'new-test-model'
         ]);
 
         $this->model->setStatus('new-status');
@@ -70,7 +70,7 @@ class HasStatuses extends TestCase
     public function test_except_status_scope_filters_correctly()
     {
         TestModel::create([
-            'name' =>  'new-test-model'
+            'name' => 'new-test-model'
         ]);
 
         $this->model->setStatus('new-status');

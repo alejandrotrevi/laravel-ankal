@@ -65,7 +65,7 @@ $model->status_updated_at;
 ```
 
 ### Scopes
-You have 2 scopes available for your models ``currentStatus`` and ``withoutStatus``.
+You have 2 scopes available for your models ``currentStatus`` and ``exceptStatus``.
 
 ```php
 // All models with status "status"
